@@ -1,6 +1,28 @@
+'use client'
 import Image from "next/image";
+import axios, { AxiosResponse } from 'axios';
+import { useEffect } from "react";
+
+const fetchData = async (): Promise<void> => {
+  try {
+    const response: AxiosResponse = await axios.get('/api');
+    console.log(response.data);
+  } catch (error: any) {
+    console.error('Error fetching data:', error);
+  }
+};
+
+
+
 
 export default function Home() {
+
+  
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
