@@ -1,24 +1,18 @@
-'use client'
+"use client";
 import Image from "next/image";
-import axios, { AxiosResponse } from 'axios';
+import axios, { AxiosResponse } from "axios";
 import { useEffect } from "react";
 
 const fetchData = async (): Promise<void> => {
   try {
-    const response: AxiosResponse = await axios.get('/api');
+    const response: AxiosResponse = await axios.get("/api");
     console.log(response.data);
   } catch (error: any) {
-    console.error('Error fetching data:', error);
+    console.error("Error fetching data:", error);
   }
 };
 
-
-
-
 export default function Home() {
-
-  
-
   useEffect(() => {
     fetchData();
   }, []);

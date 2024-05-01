@@ -1,1 +1,37 @@
-node_modules
+# Ignore Next.js build output
+.next/
+
+# Ignore Node.js build output
+node_modules/
+
+# Ignore environment files
+.env*
+
+# Ignore development server logs
+*.log
+
+# Ignore npm debug log
+npm-debug.log*
+
+# Ignore yarn log file
+yarn-debug.log*
+
+# Ignore yarn error log
+yarn-error.log*
+
+# Ignore macOS folder attributes
+.DS_Store
+
+# Ignore IDE configuration files
+.idea/
+.vscode/
+
+# Ignore coverage output
+coverage/
+
+# Ignore temporary files
+*.tmp
+*.bak
+
+# Ignore npm modules
+package-lock.json
