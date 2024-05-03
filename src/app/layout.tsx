@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/containers/navigation/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,10 @@ export default function RootLayout({
   // TODO: add navbar and footer to this page
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} w-full flex flex-col min-h-screen`}>
+        <Header />
+        <main className="min-h-screen">{children}</main>
+      </body>
     </html>
   );
 }

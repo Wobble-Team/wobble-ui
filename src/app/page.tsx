@@ -13,11 +13,10 @@ const fetchData = async (): Promise<void> => {
 };
 
 export default function Home() {
-// this is where the page loads on /
+  // this is where the page loads on /
   return (
     <main>
       <Welcome />
     </main>
-
   );
 }
